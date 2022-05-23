@@ -1,0 +1,102 @@
+{
+    "openapi": "3.0.0",
+    "paths": {
+        "/material-codes": {
+          "get": {
+            "operationId": "AppController_getMaterialCode",
+            "parameters": [
+              
+            ],
+            "responses": {
+              "200": {
+                "description": ""
+              }
+            }
+          }
+        },
+        "/material-groups": {
+          "get": {
+            "operationId": "AppController_getMaterialGroup",
+            "parameters": [
+              
+            ],
+            "responses": {
+              "200": {
+                "description": ""
+              }
+            }
+          }
+        },
+        "/purchase-requsitions": {
+          "get": {
+            "operationId": "AppController_getHello",
+            "parameters": [
+              
+            ],
+            "responses": {
+              "200": {
+                "description": ""
+              }
+            }
+          }
+        },
+        "/purchase-requsition": {
+          "post": {
+            "operationId": "AppController_createPurchaseRequestion",
+            "parameters": [
+              
+            ],
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PRRequest"
+                  }
+                }
+              }
+            },
+            "responses": {
+              "201": {
+                "description": ""
+              }
+            }
+          }
+        }
+      },
+    "info": {
+        "title": "sap-server",
+        "description": "The purchase-requsitions API description",
+        "version": "1.0",
+        "contact": {}
+    },
+    "tags": [
+        {
+            "name": "purchase-requsitions",
+            "description": ""
+        }
+    ],
+    "servers": [{
+        "url": "http://sap-erp.itzroks-666000ldq2-cmrbae-4b4a324f027aea19c5cbc0c3275c4656-0000.hkg02.containers.appdomain.cloud"
+    }],
+    "components": {
+        "schemas": {
+            "PRRequest": {
+                "type": "object",
+                "properties": {
+                    "materialName": {
+                        "type": "string"
+                    },
+                    "expectDelivery": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "materialName",
+                    "expectDelivery"
+                ]
+            }
+        }
+    }
+}
